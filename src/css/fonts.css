@@ -1,0 +1,31 @@
+@font-face {
+  font-family: Inter;
+  font-weight: 100 1000;
+  src: url(../assets/font/Inter-VariableFont.ttf);
+}
+
+@font-face {
+  font-family: Montserrat Alternates;
+  font-weight: normal;
+  src: url(../assets/font/MontserratAlternates-Regular.ttf);
+}
+
+@font-face {
+  font-family: Montserrat Alternates;
+  font-weight: bold;
+  src: url(../assets/font/MontserratAlternates-Bold.ttf);
+}
+
+@font-face {
+  font-family: Montserrat Alternates;
+  font-weight: normal;
+  font-style: italic;
+  src: url(../assets/font/MontserratAlternates-Italic.ttf);
+}
+
+@font-face {
+  font-family: Montserrat Alternates;
+  font-weight: bold;
+  font-style: italic;
+  src: url(../assets/font/MontserratAlternates-BoldItalic.ttf);
+}
