@@ -5,40 +5,18 @@ html {
 }
 
 body {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 180px 24px 160px 24px;
   margin: 0;
   overflow-x: hidden;
 }
 
 * {
   box-sizing: border-box;
-}
-
-main {
-  width: 100vw;
-  min-height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  padding: 160px 24px 160px;
-}
-
-@media only screen and (min-width: 700px) {
-  main {
-    padding: 160px 24px 160px 160px;
-  }
-}
-
-@media only screen and (min-width: 1920px) {
-  main {
-    padding: 160px 320px 160px 320px !important;
-  }
-}
-
-main > div {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
 }
 
 h1, h2, h3 {
@@ -52,20 +30,4 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-.owner {
-  font-family: Montserrat Alternates, monospace;
-  color: #808080;
-}
-
-.slash {
-  color: #606060;
-  font-size: 1.5rem;
-  font-weight: 1000;
-  padding: 0px 4px;
-}
-
-.repo {
-  font-family: Montserrat Alternates, monospace;
 }

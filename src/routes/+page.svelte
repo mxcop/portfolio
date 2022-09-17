@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Preview from "$lib/preview.svelte";
   import Repos from "$lib/repos.svelte";
   import { onMount } from "svelte";
 
@@ -21,51 +22,19 @@
   });
 </script>
 
-<div class="sidebar">
-  <section class="cycle">
-    Eat<br>
-    Sleep<br>
-    <span>Have Fun</span><br>
-    Repeat<br>
-  </section>
-</div>
 
 <div class="content">
+  <Preview />
   <Repos repos={data.repos} />
 </div>
+
 
 <style lang="scss">
   @import './+page.css';
 
-  .sidebar {
-    position: fixed;
-    left: 0;
-    width: 250px;
-    height: calc(100vh - 160px);
-
-    display: flex;
-    flex-direction: column-reverse;
-    z-index: 3;
-
-    .cycle {
-      margin: 20px;
-      font-weight: 1000;
-      font-size: 2rem;
-      color: #fff2;
-
-      user-select: none;
-      -webkit-user-select: none;
-
-      span {
-        color: #fff5;
-      }
-    }
-  }
-
   .content {
     flex-grow: 1;
     height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: visible;
   }
 </style>
