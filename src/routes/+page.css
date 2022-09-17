@@ -2,6 +2,7 @@ html {
   font-family: "Inter", monospace !important;
   background-color: #1a1a1a;
   color: #a0a0a0;
+  overflow-x: hidden;
 }
 
 body {
@@ -10,9 +11,15 @@ body {
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 180px 24px 160px 24px;
+  padding: 160px 24px 160px 24px;
   margin: 0;
   overflow-x: hidden;
+}
+
+@media only screen and (max-width: 940px) {
+  body {
+    padding: 40px 24px 160px 24px !important;
+  }
 }
 
 * {

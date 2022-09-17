@@ -42,25 +42,10 @@
     display: flex;
     z-index: 3;
 
-    &::after {
-      z-index: 0;
-      position: absolute;
-      content: "";
-      top: -260px;
-      left: -40px;
-      width: 520px;
-      height: 520px;
-      backdrop-filter: blur(4px);
-      mask: radial-gradient(
-        rgba(0, 0, 0, 1) 0%,
-        rgba(0, 0, 0, 0) 70%
-      );
-    }
-
     img {
       z-index: 3;
-      width: 120px;
-      height: 120px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
       border: 2px solid #fff3;
 
