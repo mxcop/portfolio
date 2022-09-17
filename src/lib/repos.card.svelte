@@ -48,9 +48,8 @@
 <style lang="scss">
 
 .card {
-  background-color: #333;
-  border-radius: 6px;
-  border: 2px solid #444;
+  border-radius: 12px;
+  //border: 2px solid #444;
   width: 460px;
   height: fit-content;
   margin: 24px 10px;
@@ -76,12 +75,16 @@
 }
 
 .header {
-  padding: 0px 16px;
+  padding: 0px 16px 0 16px;
   display: flex;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 
   .id {
     display: flex;
     flex: auto;
+    z-index: 2;
 
     .owner {
       font-weight: 400;
@@ -104,7 +107,7 @@
 }
 
 .body {
-  background-color: #222;
+  background-color: #1a1a1a;
 
   .description {
     padding: 16px 16px 8px 16px;

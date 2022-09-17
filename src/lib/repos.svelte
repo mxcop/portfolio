@@ -13,11 +13,11 @@
 </script>
 
 
-<div class="repos">
+<section class="repos">
   {#each data as repo}
     <RepoCard {repo} />
   {/each}
-</div>
+</section>
 
 
 <style>
