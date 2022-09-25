@@ -25,10 +25,10 @@ const projects: { [key: string]: ProjectData | any } = {
 
   /** Miniturn PvP Turn-based Game */
   miniturn: {
-    banner: "https://coppen.org/img/projects/banners/miniturn.png",
+    banner: "src/assets/img/miniturn-banner.png",
     steam_url: "https://store.steampowered.com/app/1069220/Miniturn",
     url: "https://store.steampowered.com/app/1069220/Miniturn",
-    desc: "Turn-based strategy game with a twist.",
+    desc: "Turn-based strategy game with a twist",
 
     languages: { Unity: 2, "C#": 1 },
     created: "2020-03-03T07:32:24Z",
@@ -36,12 +36,12 @@ const projects: { [key: string]: ProjectData | any } = {
   },
 
   "6502-Emulator": {
-    banner: "https://coppen.org/img/projects/banners/mos6502.png",
-    desc: "Self-made MOS 6502 processor emulator."
+    banner: "src/assets/img/mos6502-banner.png",
+    desc: "Self-made MOS 6502 processor emulator"
   },
 
   CSNN: {
-    desc: "Custom Neural Network library for C#."
+    desc: "Custom Neural Network library for C#"
   }
 
 }

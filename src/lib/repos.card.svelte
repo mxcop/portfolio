@@ -20,7 +20,7 @@
 
     {#if repo.stargazers_count}
       <div class="stargazers">
-        <i>⭐</i> <p>{ repo.stargazers_count }</p>
+        <img src="https://api.iconify.design/fluent:star-12-filled.svg" alt="Stargazers"> <p>{ repo.stargazers_count }</p>
       </div>
     {:else if repo.steam_url}
       <div class="steamlink">
@@ -65,7 +65,6 @@
 
 .card {
   border-radius: 12px;
-  //border: 2px solid #444;
   width: 460px;
   height: fit-content;
   margin: 24px 10px;
@@ -112,7 +111,7 @@
   border: 1.5px solid #fff2;
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   position: relative;
 
@@ -135,9 +134,9 @@
     display: flex;
     font-family: IBM Plex Mono, monospace;
 
-    i {
-      font-style: normal;
-      margin: 17px 4px 0 0;
+    img {
+      margin-right: 6px;
+      filter: invert(80%);
     }
 
     p {

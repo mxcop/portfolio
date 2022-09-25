@@ -71,6 +71,13 @@
       }
     }
 
+    // Hide the quote on small screens.
+    @media only screen and (max-width: 940px) {
+      .quote {
+        display: none;
+      }
+    }
+
     .quote {
       height: fit-content;
       margin: 12px 0 0 auto;
