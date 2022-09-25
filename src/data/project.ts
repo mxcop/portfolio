@@ -1,4 +1,4 @@
-import type { OctoRepo } from "$lib/repos";
+import type { OctoRepo } from "../data/repos";
 import type { ProjectData } from "./projects";
 
 /** Portfolio Project Interface */

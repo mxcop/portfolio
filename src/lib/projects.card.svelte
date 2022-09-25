@@ -48,7 +48,7 @@
         {#each languages as lang}
           {#if !hide(repo.languages, lang)}
             <li><img
-              src="https://api.iconify.design/{ langIconUrl(lang) }.svg"
+              src="src/assets/svg/langs/{ langIconUrl(lang, true) }.svg"
               alt={lang}
             /></li>
           {/if}
@@ -98,7 +98,8 @@
           width: 22px;
           height: 22px;
           margin-top: -4px;
-          filter: invert(30%);
+          //filter: grayscale(100%);
+          opacity: .5;
         }
       }
     }

@@ -1,11 +1,13 @@
 <script lang="ts">
+  import Languages from "$lib/languages.svelte";
   import Preview from "$lib/preview.svelte";
-  import Repos from "$lib/repos.svelte";
+  import Projects from "$lib/projects.svelte";
+  import type { Language } from "../data/languages";
   import { onMount } from "svelte";
 
   export let data: any;
 
-  let langs = [];
+  let langs: Array<Language> = [];
 
   onMount(() => {
     const repos = JSON.parse(localStorage.getItem("repos")!) as any[];
@@ -17,15 +19,16 @@
         name: lang,
         val: languages[lang]
       }
-    }).sort((a, b) => b.val - a.val).filter((lang) => lang.name != 'ShaderLab');
-    console.log(top_languages);
+    }).sort((a, b) => b.val - a.val).filter((lang) => lang.name != 'ShaderLab' && lang.name != 'Batchfile');
+    langs = top_languages;
   });
 </script>
 
 
 <div class="content">
   <Preview />
-  <Repos repos={data.repos} />
+  <Languages languages={langs} />
+  <Projects repos={data.repos} />
 </div>
 
 

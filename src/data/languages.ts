@@ -1,6 +1,16 @@
+export interface Language {
+  name: string;
+  val: number;
+}
+
 /** Get a url to the icon for a language. */
-export function langIconUrl(lang: string): string {
-  return icons[lang] ?? "mdi:adjust";
+export function langIconUrl(lang: string, colorful: boolean = false): string {
+  if (!iconsColor[lang]) console.warn("Missing icon for language : " + lang);
+
+  if (!colorful) {
+    return icons[lang] ?? "mdi:adjust";
+  }
+  return iconsColor[lang] ?? "go";
 }
 
 /** Whether to hide or show a language. */
@@ -18,6 +28,7 @@ export function hide(langs: any, lang: string): boolean {
   return false;
 }
 
+/** Language icon urls. */
 const icons: any = {
   Svelte: "cib:svelte",
   JavaScript: "cib:javascript",
@@ -29,4 +40,21 @@ const icons: any = {
   "C#": "mdi:language-csharp",
   Unity: "bi:unity",
   Tauri: "simple-icons:tauri"
+};
+
+/** Language icon urls with color. */
+const iconsColor: any = {
+  Svelte: "svelte",
+  JavaScript: "js",
+  TypeScript: "typescript",
+  Rust: "rust",
+  CSS: "css",
+  SCSS: "sass",
+  HTML: "html",
+  "C#": "csharp",
+  Tauri: "tauri",
+  Vue: "vue",
+  Batchfile: "bat",
+  HLSL: "unity",
+  Unity: "unity",
 };

@@ -1,6 +1,6 @@
 import { error, type Load } from "@sveltejs/kit";
 import { browser } from '$app/environment';
-import { fromResponse, updateRepoLanguages } from "$lib/repos";
+import { fromResponse, updateRepoLanguages } from "../data/repos";
 
 const pat_token = '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';
 
