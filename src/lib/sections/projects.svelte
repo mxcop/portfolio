@@ -34,7 +34,7 @@
 
 
 <section class="projects">
-  <div class="title">My Projects</div>
+  <div class="title">Projects & Contributions</div>
   {#each projects as project}
     <RepoCard repo={project} />
   {/each}

@@ -5,13 +5,13 @@ const projects: { [key: string]: Project } = {
   /** Emberry Chat Project */
   emberry: {
     enchanted: true,
-    banner: "src/assets/img/emberry-banner.png",
+    banner: "src/assets/img/banners/emberry-banner.png",
     languages: { Tauri: 1 }
   },
 
   /** Youtile Youtube Viewer Project */
   youtile: {
-    banner: "src/assets/img/youtile-banner.png",
+    banner: "src/assets/img/banners/youtile-banner.png",
     urls: {
       download: "https://github.com/youtile/youtile/releases/latest",
     },
@@ -20,7 +20,7 @@ const projects: { [key: string]: Project } = {
 
   /** Miniturn PvP Turn-based Game */
   miniturn: {
-    banner: "src/assets/img/miniturn-banner.png",
+    banner: "src/assets/img/banners/miniturn-banner.png",
     urls: {
       main: "https://store.steampowered.com/app/1069220/Miniturn",
       steam: "https://store.steampowered.com/app/1069220/Miniturn",
@@ -35,7 +35,7 @@ const projects: { [key: string]: Project } = {
   /** Rogue planets for the Ludum Dare gamejam */
   "ld49": {
     name: "Rogue Planets",
-    banner: "src/assets/img/rogue-planets-banner.png",
+    banner: "src/assets/img/banners/rogue-planets-banner.png",
     urls: {
       itch: "https://roboolet.itch.io/rogue-planets",
     },
@@ -50,7 +50,7 @@ const projects: { [key: string]: Project } = {
 
   /** 6502 Emulator I build using C# */
   "6502-Emulator": {
-    banner: "src/assets/img/mos6502-banner.png",
+    banner: "src/assets/img/banners/mos6502-banner.png",
     desc: "Self-made MOS 6502 processor emulator"
   },
 
