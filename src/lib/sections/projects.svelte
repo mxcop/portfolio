@@ -1,9 +1,9 @@
 <script lang="ts">
   import RepoCard from "./projects.card.svelte";
-  import { onReposUpdated, type OctoRepo } from "../data/repos";
+  import { onReposUpdated, type OctoRepo } from "$data/repos";
   import { onMount } from "svelte";
-  import projectData from "../data/projects";
-  import { repoToProject, type Project } from "../data/project";
+  import projectData from "$data/projects";
+  import { repoToProject, type Project } from "$data/project";
 
   export let repos: OctoRepo[];
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { langIconUrl, type Language } from "../data/languages";
+  import { langIconUrl, type Language } from "$data/languages";
 
   export let languages: Array<Language>;
 

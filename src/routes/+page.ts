@@ -6,7 +6,6 @@ const pat_token = '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';
 
 export const load: Load = async ({ fetch }) => {
   if (browser) {
-
     const stored_repos = localStorage.getItem("repos");
 
     // Return the stored repos if they exist.

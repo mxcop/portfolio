@@ -2,8 +2,7 @@
 export interface OctoRepo {
   owner: { name: string, url: string };
 
-  name: string; 
-  url: string;
+  name: string;
   created?: string;
   updated?: string;
 
@@ -18,6 +17,10 @@ export interface OctoRepo {
     name: string;
     spdx_id: string;
     url: string;
+  };
+
+  urls: {
+    repo: string;
   };
 
   stargazers_count: number;
@@ -38,7 +41,9 @@ export function fromResponse(response: any[]): OctoRepo[] {
       owner: { name: repo.owner.login, url: repo.owner.html_url },
 
       name: repo.name, 
-      url: repo.html_url,
+      urls: {
+        repo: repo.html_url
+      },
       created: repo.created_at,
       updated: repo.pushed_at,
 

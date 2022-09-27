@@ -1,7 +1,7 @@
 <script lang="ts">
   //import Languages from "$lib/languages.svelte";
-  import Preview from "$lib/preview.svelte";
-  import Projects from "$lib/projects.svelte";
+  import Preview from "$sections/preview.svelte";
+  import Projects from "$sections/projects.svelte";
   //import type { Language } from "../data/languages";
   import { onMount } from "svelte";
 

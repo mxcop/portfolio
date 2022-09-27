@@ -16,7 +16,8 @@
   background-color: #fff2;
 }
 
-.ico-btn img {
+.ico-btn svg {
   width: 24px;
   height: 24px;
+  color: #fffd;
 }

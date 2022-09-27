@@ -8,7 +8,16 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+
+    alias: {
+      // Data Management Directory
+      '$data/*': './src/data/*',
+      // Page Sections Directory
+      '$sections/*': './src/lib/sections/*',
+      // Svg Assets Directory
+      '$svg/*': './src/assets/svg/*'
+    }
 	}
 };
 

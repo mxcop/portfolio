@@ -1,5 +1,6 @@
 <script>
   import { page } from '$app/stores';
+  import Icon from '$lib/icon.svelte';
 </script>
 
 
@@ -7,7 +8,8 @@
 
   <h2>Oops! Looks like something went wrong...</h2>
   <h2 style="color: #777">Here's some coffee for the troubles</h2>
-  <img src="src/assets/svg/coffee.svg" alt="Sorry for the troubles!">
+  <Icon name="coffee" />
+  <!-- <img src="src/assets/svg/coffee.svg" alt="Sorry for the troubles!"> -->
   <p>Please try again later :D</p>
 
   <footer>
@@ -36,12 +38,12 @@
       font-size: 1.5rem;
     }
 
-    img {
+    :global(svg) {
       width: 64px;
       height: 64px;
 
       margin-top: 16px;
-      filter: invert(80%);
+      color: #ddd;
     }
 
     i {

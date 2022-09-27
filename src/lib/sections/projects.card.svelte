@@ -1,8 +1,19 @@
 <script lang="ts">
-  import { hide, langIconUrl } from "../data/languages";
-  import type { Project } from "../data/project";
+  import { hide, langIconUrl } from "$data/languages";
+  import type { Project } from "$data/project";
+  import Links from "./projects.links.svelte";
+  import Icon from "$lib/icon.svelte";
 
   export let repo: Project;
+
+  function date(s: string | undefined, end: boolean): string {
+    if (s) {
+      if (s.includes('-')) return new Date(s).toDateString().substring(3);
+      return s;
+    }
+    if (end) return new Date().toDateString().substring(3);
+    return "unknown";
+  }
 
   $: languages = Object.keys(repo.languages!);
 </script>
@@ -12,48 +23,25 @@
 
   <div class="header" style={ 
     (repo.enchanted ? '' : '--enchanted: none;') + 
-    (repo.banner ? `min-height: 182px; background-image: url('${ repo.banner }')` : '') 
+    (repo.banner ? `min-height: 190px; background-image: url('${ repo.banner }')` : '') 
   }>
 
-    {#if repo.banner}
-      <nav class="links">
-
-        {#if repo.steam_url}
-        <a href={ repo.steam_url } class="ico-btn">
-          <img src="src/assets/svg/steam.svg" alt="Steam Store Page">
-        </a>
-        {/if}
-
-        {#if repo.github}
-        <a href={ repo.url } class="ico-btn">
-          <img src="src/assets/svg/github.svg" alt="Github Repo">
-        </a>
-        {/if}
-
-      </nav>
-    {/if}
+    <Links urls={repo.urls} visible={repo.banner !== undefined} />
 
     <div class="id">
       <h3>
-        <a class="owner" href={ repo.owner.url }>{ repo.owner.name }</a> / <a class="repo" href={ repo.url }>{ repo.name }</a>
+        <a class="owner" href={ repo.owner?.url }>{ repo.owner?.name }</a> / <a class="repo" href={ repo.urls?.repo || repo.urls?.main }>{ repo.name }</a>
       </h3>
     </div>
 
     {#if repo.stargazers_count}
       <i class="stargazers">
-        <img src="https://api.iconify.design/fluent:star-12-filled.svg" alt="Stargazers"> <p>{ repo.stargazers_count }</p>
+        <Icon name="star" />
+        <p>{ repo.stargazers_count }</p>
       </i>
     {/if}
 
-    {#if !repo.banner}
-      <nav class="links inline">
-        {#if repo.github}
-        <a href={ repo.url } class="ico-btn">
-          <img src="src/assets/svg/github.svg" alt="Github Repo">
-        </a>
-        {/if}
-      </nav>
-    {/if}
+    <Links urls={repo.urls} visible={repo.banner === undefined} inline={true} github={repo.github} />
   </div>
 
   <div class="body">
@@ -65,15 +53,12 @@
     
     <footer>
       <p class="time">
-        { repo.created ? new Date(repo.created).toDateString().substring(3) : 'unknown' } —— { repo.updated ? new Date(repo.updated).toDateString().substring(3) : new Date().toDateString().substring(3) }
+        { date(repo.created, false) } —— { date(repo.updated, true) }
       </p>
       <ul>
         {#each languages as lang}
           {#if !hide(repo.languages, lang)}
-            <li><img
-              src="src/assets/svg/langs/{ langIconUrl(lang, true) }.svg"
-              alt={lang}
-            /></li>
+            <li><Icon name="langs/{ langIconUrl(lang, true) }" /></li>
           {/if}
         {/each}
       </ul>
@@ -85,6 +70,7 @@
 
 <style lang="scss">
 
+// Project Card
 .card {
   position: relative;
   border-radius: 12px;
@@ -127,7 +113,7 @@
         margin-left: 12px;
         white-space: nowrap;
 
-        img {
+        :global(svg) {
           width: 22px;
           height: 22px;
           opacity: .8;
@@ -137,6 +123,7 @@
   }
 }
 
+// Project Card Header
 .header {
   padding: 0px 16px 0 16px;
   display: flex;
@@ -145,34 +132,12 @@
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
   background-color: #0006;
-  background-size: cover;
+  background-size: 101%;
   background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   z-index: 1;
   overflow: hidden;
-
-  .links {
-    width: 100%;
-    height: 60px;
-    margin: 0 0 0 auto;
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    a {
-      margin-left: 8px;
-    }
-
-    a img {
-      filter: invert(100%);
-      opacity: .8;
-    }
-
-    &.inline {
-      width: auto;
-    }
-  }
 
   .id {
     display: flex;
@@ -197,21 +162,23 @@
     font-family: IBM Plex Mono, monospace;
     font-style: normal;
 
-    img {
+    :global(svg) {
       width: 20px;
       height: 20px;
-      margin: 0 6px 1px 0;
-      filter: invert(80%);
+      margin: 0 4px 2px 0;
+      color: #daaa3f;
     }
 
     p {
       display: flex;
       align-items: center;
       color: #ddd;
+      margin-right: 2px;
     }
   }
 }
 
+// Project Card Body
 .body {
   .description {
     padding: 16px 16px 8px 16px;
