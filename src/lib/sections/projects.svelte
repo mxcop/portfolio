@@ -33,7 +33,7 @@
 </script>
 
 
-<section class="repos">
+<section class="projects">
   <div class="title">My Projects</div>
   {#each projects as project}
     <RepoCard repo={project} />
@@ -43,7 +43,7 @@
 
 <style>
 
-.repos {
+.projects {
   padding: 0px 16px;
   margin-top: 80px;
   width: 100%;

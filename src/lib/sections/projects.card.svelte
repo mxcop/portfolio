@@ -15,7 +15,7 @@
     return "unknown";
   }
 
-  $: languages = Object.keys(repo.languages!);
+  $: languages = Object.keys(repo.languages ?? {});
 </script>
 
 
@@ -26,22 +26,24 @@
     (repo.banner ? `min-height: 190px; background-image: url('${ repo.banner }')` : '') 
   }>
 
-    <Links urls={repo.urls} visible={repo.banner !== undefined} />
+    <Links urls={repo.urls} achievement={repo.achievement} visible={repo.banner !== undefined} />
 
-    <div class="id">
-      <h3>
-        <a class="owner" href={ repo.owner?.url }>{ repo.owner?.name }</a> / <a class="repo" href={ repo.urls?.repo || repo.urls?.main }>{ repo.name }</a>
-      </h3>
+    <div class="info">
+      <div class="id">
+        <h3>
+          <a class="owner" href={ repo.owner?.url }>{ repo.owner?.name }</a> / <a class="repo" href={ repo.urls?.repo || repo.urls?.main }>{ repo.name }</a>
+        </h3>
+      </div>
+  
+      {#if repo.stargazers_count}
+        <i class="stargazers">
+          <Icon name="star" />
+          <p>{ repo.stargazers_count }</p>
+        </i>
+      {/if}
+  
+      <Links urls={repo.urls} visible={repo.banner === undefined} inline={true} />
     </div>
-
-    {#if repo.stargazers_count}
-      <i class="stargazers">
-        <Icon name="star" />
-        <p>{ repo.stargazers_count }</p>
-      </i>
-    {/if}
-
-    <Links urls={repo.urls} visible={repo.banner === undefined} inline={true} github={repo.github} />
   </div>
 
   <div class="body">
@@ -132,48 +134,56 @@
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
   background-color: #0006;
-  background-size: 101%;
+  background-size: auto 102%;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
   z-index: 1;
   overflow: hidden;
 
-  .id {
+  .info {
     display: flex;
     flex: auto;
-    z-index: 2;
     margin-top: auto;
-
-    .owner {
-      font-weight: 400;
-    }
-
-    .repo {
-      font-family: 600;
-    }
-  }
-
-  .stargazers {
-    margin-left: 16px;
-    margin-top: auto;
-    display: flex;
     align-items: center;
-    font-family: IBM Plex Mono, monospace;
-    font-style: normal;
 
-    :global(svg) {
-      width: 20px;
-      height: 20px;
-      margin: 0 4px 2px 0;
-      color: #daaa3f;
+    .id {
+      display: flex;
+      flex: auto;
+      z-index: 2;
+      margin-top: auto;
+
+      .owner {
+        font-weight: 400;
+      }
+
+      .repo {
+        font-family: 600;
+      }
     }
 
-    p {
+    .stargazers {
+      margin-left: 16px;
+      margin-top: auto;
+      margin-bottom: 2px;
       display: flex;
       align-items: center;
-      color: #ddd;
-      margin-right: 2px;
+      font-family: IBM Plex Mono, monospace;
+      font-style: normal;
+
+      :global(svg) {
+        width: 20px;
+        height: 20px;
+        margin: 0 2px 2px 0;
+        color: #daaa3f;
+      }
+
+      p {
+        display: flex;
+        align-items: center;
+        color: #ddd;
+        margin-right: 2px;
+      }
     }
   }
 }

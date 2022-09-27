@@ -25,6 +25,13 @@ export interface Project {
     url: string;
   };
 
+  /** Something this project has achieved */
+  achievement?: {
+    logo: string;
+    url?: string;
+    text?: string;
+  };
+
   urls?: ProjectUrls,
 
   /** Number of github stars */

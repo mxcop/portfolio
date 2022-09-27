@@ -32,6 +32,22 @@ const projects: { [key: string]: Project } = {
     updated: "2021-11-22T07:32:24Z"
   },
 
+  /** Rogue planets for the Ludum Dare gamejam */
+  "ld49": {
+    name: "Rogue Planets",
+    banner: "src/assets/img/rogue-planets-banner.png",
+    urls: {
+      itch: "https://roboolet.itch.io/rogue-planets",
+    },
+    desc: "Our game for the 49th Ludum Dare gamejam",
+
+    achievement: {
+      logo: "src/assets/img/ludum-dare-logo.png",
+      url: "https://ldjam.com/events/ludum-dare/49/rogue-planets",
+      text: "39"
+    }
+  },
+
   /** 6502 Emulator I build using C# */
   "6502-Emulator": {
     banner: "src/assets/img/mos6502-banner.png",
@@ -39,7 +55,7 @@ const projects: { [key: string]: Project } = {
   },
 
   /** 2D Ascii art puzzle platformer game */
-  Prompt_: {
+  prompt_: {
     desc: "A 2D puzzle platformer with an ascii art style",
     urls: {
       main: "https://maxcoppen.itch.io/prompt",
