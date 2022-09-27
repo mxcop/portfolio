@@ -1,3 +1,5 @@
+@import url(../css/global.css);
+
 html {
   font-family: "Inter", monospace !important;
   background-color: #1a1a1a;

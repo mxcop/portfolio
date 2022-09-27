@@ -13,6 +13,7 @@ const projects: { [key: string]: ProjectData | any } = {
 
   /** Emberry Chat Project */
   emberry: {
+    enchanted: true,
     banner: "src/assets/img/emberry-banner.png",
     languages: { Tauri: 1 }
   },
@@ -40,7 +41,13 @@ const projects: { [key: string]: ProjectData | any } = {
     desc: "Self-made MOS 6502 processor emulator"
   },
 
+  Prompt_: {
+    desc: "A 2D puzzle platformer with an ascii art style",
+    languages: { Unity: 2, "C#": 1 }
+  },
+
   CSNN: {
+    enchanted: true,
     desc: "Custom Neural Network library for C#"
   }
 

@@ -8,16 +8,20 @@
 
 
 <nav>
+  
   <img src="src/assets/img/max.jpg" alt="My Face :P">
+
   <div class="info">
     <h3>Max Coppen</h3>
     <p>Born 2002 ⠿ { age() }</p>
   </div>
+
   <a class="quote" href="https://www.theguardian.com/science/2021/feb/23/dare-mighty-things-hidden-message-found-on-nasa-mars-rover-parachute">
     Dare<br>
     <span class="middle">Mighty</span><br>
     <span class="bottom">Things</span>
   </a>
+
 </nav>
 
 <main>
@@ -76,6 +80,8 @@
       .quote {
         display: none;
       }
+
+      position: absolute;
     }
 
     .quote {
