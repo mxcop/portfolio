@@ -53,9 +53,11 @@ const iconsColor: any = {
   SCSS: "sass",
   HTML: "html",
   "C#": "csharp",
+  "C++": "cpp",
   Tauri: "tauri",
   Vue: "vue",
   Batchfile: "bat",
   HLSL: "unity",
+  GLSL: "glsl",
   Unity: "unity",
 };

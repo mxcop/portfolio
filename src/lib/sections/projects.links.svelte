@@ -17,7 +17,7 @@
 
     {#if achievement}
     <a href={ achievement.url } class="ico-btn achievement">
-      <img src={achievement.logo} alt="">
+      <Icon name="award" />
       { achievement.text }<sup>th</sup>
     </a>
     {/if}
@@ -92,7 +92,7 @@ a {
 .achievement {
   max-width: none;
   width: fit-content;
-  padding: 0 8px;
+  padding: 0 8px 0 4px;
   margin: 0;
 
   font-family: Inter;
@@ -109,10 +109,10 @@ a {
   background-color: #ffffff18;
 }
 
-.achievement img {
+.achievement :global(svg) {
   width: auto;
-  height: 20px;
-  margin-right: 4px;
+  height: 24px;
+  margin-right: 6px;
 }
 
 </style>

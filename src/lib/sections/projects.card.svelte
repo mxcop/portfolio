@@ -31,7 +31,7 @@
     <div class="info">
       <div class="id">
         <h3>
-          <a class="owner" href={ repo.owner?.url }>{ repo.owner?.name }</a> / <a class="repo" href={ repo.urls?.repo || repo.urls?.main }>{ repo.name }</a>
+          <a class="owner" href={ repo.owner?.url }>{ repo.owner?.name }</a> / <a class="repo" style={ !repo.urls?.repo && !repo.urls?.main ? 'text-decoration: none;' : undefined } href={ repo.urls?.repo || repo.urls?.main }>{ repo.name }</a>
         </h3>
       </div>
   

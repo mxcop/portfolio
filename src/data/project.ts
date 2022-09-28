@@ -27,7 +27,6 @@ export interface Project {
 
   /** Something this project has achieved */
   achievement?: {
-    logo: string;
     url?: string;
     text?: string;
   };

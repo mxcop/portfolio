@@ -110,6 +110,7 @@
   main {
     position: relative;
     width: 100%;
-    max-width: 1080px;
+    //max-width: 1080px;
+    max-width: 1520px;
   }
 </style>
