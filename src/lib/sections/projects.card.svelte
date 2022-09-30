@@ -41,6 +41,12 @@
           <p>{ repo.stargazers_count }</p>
         </i>
       {/if}
+
+      {#if !repo.github}
+        <i class="stargazers">
+          <p class="private-tag">Private</p>
+        </i>
+      {/if}
   
       <Links urls={repo.urls} visible={repo.banner === undefined} inline={true} />
     </div>
@@ -183,6 +189,20 @@
         align-items: center;
         color: #ddd;
         margin-right: 2px;
+      }
+
+      .private-tag {
+        border-radius: 14px;
+        background-color: #0008;
+        backdrop-filter: blur(32px);
+        color: #bbb;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        margin-bottom: 16px;
+        padding: 2px 8px;
+        white-space: nowrap;
+        font-family: "Inter", monospace;
       }
     }
   }

@@ -1,9 +1,22 @@
 <script>
-  $: age = () => {
+  import Icon from "$lib/icon.svelte";
+
+  const age = () => {
     var ageDifMs = Date.now() - Date.parse("11 Aug 2002 00:00:00 GMT");
     var ageDate = new Date(ageDifMs); // miliseconds from epoch
     return Math.abs(ageDate.getUTCFullYear() - 1970);
   };
+
+  const year = () => {
+    var date = Date.now();
+    return new Date(date).getUTCFullYear();
+  };
+
+  /** Copy my discord tag to the users clipboard */
+  function copyDiscordTag() {
+    navigator.clipboard.writeText("MΛX#2223");
+  }
+
 </script>
 
 
@@ -12,7 +25,23 @@
   <img src="src/assets/img/max.jpg" alt="My Face :P">
 
   <div class="info">
-    <h3>Max Coppen</h3>
+    <div class="row">
+      <h3>Max Coppen</h3>
+      <div class="column">
+        <a href="https://github.com/mxcop" class="ico-btn">
+          <Icon name="sites/github" />
+        </a>
+        <button on:click={copyDiscordTag} class="copy-btn">
+          <Icon name="sites/discord" />
+        </button>
+        <a href="mailto: mx.coppen@gmail.com" class="ico-btn">
+          <Icon name="sites/gmail" />
+        </a>
+        <a href="https://www.linkedin.com/in/max-coppen-b6a16017b" class="ico-btn">
+          <Icon name="sites/linkedin" />
+        </a>
+      </div>
+    </div>
     <p>Born 2002 ⠿ { age() }</p>
   </div>
 
@@ -27,6 +56,12 @@
 <main>
   <slot />
 </main>
+
+<footer>
+  <small>
+    © Copyright { year() } Max Coppen
+  </small>
+</footer>
 
 
 <style lang="scss">
@@ -61,9 +96,32 @@
 
     .info {
       z-index: 3;
+
+      .row {
+        display: flex;
+        align-items: center;
+        max-height: 46px;
+
+        .column {
+          display: flex;
+          justify-content: end;
+          flex-wrap: wrap;
+          max-height: 46px;
+
+          .ico-btn {
+            margin-left: 8px;
+          }
+
+          .copy-btn {
+            margin-left: 8px;
+          }
+        }
+      }
+
       h3 {
         font-size: 24px;
-        margin: 8px 0;
+        margin: 8px 8px 8px 0;
+        white-space: nowrap;
       }
 
       p {
@@ -112,5 +170,22 @@
     width: 100%;
     //max-width: 1080px;
     max-width: 1520px;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 52px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    small {
+      color: #fff4;
+    }
   }
 </style>

@@ -22,3 +22,64 @@
   height: 24px;
   color: #fffd;
 }
+
+.copy-btn {
+  position: relative;
+  width: 32px;
+  height: 32px;
+
+  max-width: 32px;
+  max-height: 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  transition: background-color 0.05s;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  background-color: #fff2;
+}
+
+.copy-btn:after {
+  content: "Copied!";
+  position: absolute;
+
+  bottom: -36px;
+  left: -20px;
+
+  width: fit-content;
+  height: 24px;
+
+  padding: 6px 12px 0 12px;
+  border-radius: 8px;
+
+  background-color: #3ba55d;
+  color: #fff;
+  font-size: 14px;
+
+  pointer-events: none;
+
+  opacity: 0;
+  transition: opacity 0.2s ease-out 3s;
+  -webkit-transition: opacity 0.2s ease-out 3s;
+}
+
+.copy-btn:active:after {
+  opacity: 1;
+  transition: opacity 0s ease-out 0s;
+  -webkit-transition: opacity 0s ease-out 0s;
+}
+
+.copy-btn svg {
+  width: 24px;
+  height: 24px;
+  color: #fffd;
+}

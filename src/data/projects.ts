@@ -34,14 +34,10 @@ const projects: { [key: string]: Project } = {
     }
   },
 
-  /** A co-op minigame my friends and I made */
-  barnstorm: {
-    banner: "src/assets/img/banners/barnstorm-banner.jpg",
-    desc: "A Frantic Co-op farming game my friends and I made",
-
-    languages: { Unity: 2, "C#": 1 },
-    created: "2020-03-03T07:32:24Z",
-    updated: "2021-11-22T07:32:24Z"
+  /** A cool ray marcher I build with opengl */
+  VoxelGameEngine: {
+    banner: "src/assets/img/banners/vge-banner.png",
+    desc: "An unfinished Ray Marcher build using C++ and OpenGL"
   },
 
   /** Miniturn PvP Turn-based Game */
@@ -83,6 +79,7 @@ const projects: { [key: string]: Project } = {
     banner: "src/assets/img/banners/codex-banner.png",
     desc: "My attempt to create a flexible & lightweight code editor",
 
+    languages: { Rust: 5, Svelte: 4, TypeScript: 3, SCSS: 2, Tauri: 1 },
     created: "2021-09-28"
   },
 
@@ -92,10 +89,14 @@ const projects: { [key: string]: Project } = {
     desc: "Small incomplete Neural Network library for C#"
   },
 
-  /** A cool ray marcher I build with opengl */
-  VoxelGameEngine: {
-    banner: "src/assets/img/banners/vge-banner.png",
-    desc: "An unfinished Ray Marcher build using C++ and OpenGL"
+  /** A co-op minigame my friends and I made */
+  barnstorm: {
+    banner: "src/assets/img/banners/barnstorm-banner.jpg",
+    desc: "A Frantic Co-op farming game my friends and I made",
+
+    languages: { Unity: 2, "C#": 1 },
+    created: "2020-03-03T07:32:24Z",
+    updated: "2021-11-22T07:32:24Z"
   },
 
   /** A game I worked on together with a team of developers */
@@ -106,6 +107,10 @@ const projects: { [key: string]: Project } = {
     languages: { Unity: 2, "C#": 1 },
     created: "2018",
     updated: "2019"
+  },
+
+  AsciiEngine: {
+    desc: "Simple little Game Engine made with C#.",
   }
 
 }
