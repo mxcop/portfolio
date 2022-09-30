@@ -1,17 +1,18 @@
 import type { Project } from "./project";
+import { asset_path } from "./path";
 
 const projects: { [key: string]: Project } = {
 
   /** Emberry Chat Project */
   emberry: {
     enchanted: true,
-    banner: "src/assets/img/banners/emberry-banner.png",
+    banner: asset_path + "/img/banners/emberry-banner.png",
     languages: { Tauri: 1 }
   },
 
   /** Youtile Youtube Viewer Project */
   youtile: {
-    banner: "src/assets/img/banners/youtile-banner.png",
+    banner: asset_path + "/img/banners/youtile-banner.png",
     urls: {
       download: "https://github.com/youtile/youtile/releases/latest",
     },
@@ -22,7 +23,7 @@ const projects: { [key: string]: Project } = {
   "ld49": {
     enchanted: true,
     name: "Rogue Planets",
-    banner: "src/assets/img/banners/rogue-planets-banner.png",
+    banner: asset_path + "/img/banners/rogue-planets-banner.png",
     urls: {
       itch: "https://roboolet.itch.io/rogue-planets",
     },
@@ -36,13 +37,13 @@ const projects: { [key: string]: Project } = {
 
   /** A cool ray marcher I build with opengl */
   VoxelGameEngine: {
-    banner: "src/assets/img/banners/vge-banner.png",
+    banner: asset_path + "/img/banners/vge-banner.png",
     desc: "An unfinished Ray Marcher build using C++ and OpenGL"
   },
 
   /** Miniturn PvP Turn-based Game */
   miniturn: {
-    banner: "src/assets/img/banners/miniturn-banner.png",
+    banner: asset_path + "/img/banners/miniturn-banner.png",
     urls: {
       main: "https://store.steampowered.com/app/1069220/Miniturn",
       steam: "https://store.steampowered.com/app/1069220/Miniturn",
@@ -56,13 +57,13 @@ const projects: { [key: string]: Project } = {
 
   /** 6502 Emulator I build using C# */
   "6502-Emulator": {
-    banner: "src/assets/img/banners/mos6502-banner.png",
+    banner: asset_path + "/img/banners/mos6502-banner.png",
     desc: "A basic MOS 6502 processor emulator"
   },
 
   /** 2D Ascii art puzzle platformer game */
   prompt_: {
-    banner: "src/assets/img/banners/prompt-banner.png",
+    banner: asset_path + "/img/banners/prompt-banner.png",
     desc: "A 2D puzzle platformer with an ascii art style",
     urls: {
       main: "https://maxcoppen.itch.io/prompt",
@@ -76,7 +77,7 @@ const projects: { [key: string]: Project } = {
 
   /** My attempt to create a flexible code editor */
   codex: {
-    banner: "src/assets/img/banners/codex-banner.png",
+    banner: asset_path + "/img/banners/codex-banner.png",
     desc: "My attempt to create a flexible & lightweight code editor",
 
     languages: { Rust: 5, Svelte: 4, TypeScript: 3, SCSS: 2, Tauri: 1 },
@@ -85,13 +86,13 @@ const projects: { [key: string]: Project } = {
 
   /** C Sharp Neural Network library I made */
   CSNN: {
-    banner: "src/assets/img/banners/csnn-banner.png",
+    banner: asset_path + "/img/banners/csnn-banner.png",
     desc: "Small incomplete Neural Network library for C#"
   },
 
   /** A co-op minigame my friends and I made */
   barnstorm: {
-    banner: "src/assets/img/banners/barnstorm-banner.jpg",
+    banner: asset_path + "/img/banners/barnstorm-banner.jpg",
     desc: "A Frantic Co-op farming game my friends and I made",
 
     languages: { Unity: 2, "C#": 1 },
@@ -101,7 +102,7 @@ const projects: { [key: string]: Project } = {
 
   /** A game I worked on together with a team of developers */
   "Slash 'n Catch": {
-    banner: "src/assets/img/banners/snc-banner.png",
+    banner: asset_path + "/img/banners/snc-banner.png",
     desc: "A project where I gained loads of gamedev experience.",
 
     languages: { Unity: 2, "C#": 1 },

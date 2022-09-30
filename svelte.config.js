@@ -29,7 +29,7 @@ const config = {
     paths: {
 			base: dev ? '' : '/portfolio',
 		},
-	}
+	},
 };
 
 export default config;

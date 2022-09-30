@@ -1,12 +1,12 @@
 <script>
-
+  import { asset_path } from "$data/path";
 </script>
 
 
 <section class="preview">
-  <article class="first window" />
-  <article class="second window" />
-  <article class="third window" />
+  <article class="first window" style="background-image: url('{ asset_path }/img/codex.png')" />
+  <article class="second window" style="background-image: url('{ asset_path }/img/barnstorm.jpg')" />
+  <article class="third window" style="background-image: url('{ asset_path }/img/emberry.png')" />
 </section>
 
 
@@ -69,8 +69,6 @@
 
         top: calc(50% - 80px);
         left: calc(50% - 180px);
-        
-        background-image: url('src/assets/img/codex.png');
       }
 
       &.second {
@@ -79,8 +77,6 @@
 
         top: calc(50% - 20px);
         left: calc(50% + 80px);
-
-        background-image: url('src/assets/img/barnstorm.jpg');
       }
 
       &.third {
@@ -88,8 +84,6 @@
 
         top: calc(50% + 80px);
         left: 50%;
-
-        background-image: url('src/assets/img/emberry.png');
       }
     }
 

@@ -1,5 +1,6 @@
 <script>
   import Icon from "$lib/icon.svelte";
+  import { asset_path } from "$data/path";
 
   const age = () => {
     var ageDifMs = Date.now() - Date.parse("11 Aug 2002 00:00:00 GMT");
@@ -22,7 +23,7 @@
 
 <nav>
   
-  <img src="src/assets/img/max.jpg" alt="My Face :P">
+  <img src="{ asset_path }/img/max.jpg" alt="My Face :P">
 
   <div class="info">
     <div class="row">
