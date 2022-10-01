@@ -34,7 +34,8 @@ Either in production, or while testing locally.
   ├─ src/css    - # Global CSS files
   │
   ├─ src/data/*        - # Typescript files for parsing api data and static data
-  │  └─ projects.ts    - # Static project data
+  │  ├─ projects.ts    - # Static project data
+  │  └─ ...
   │
   ├─ src/lib    - # Svelte components
   │
