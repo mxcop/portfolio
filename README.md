@@ -17,4 +17,4 @@ git commit -m "..."
 
 <br>
 
-<sub>Powered by SvelteKit</sub>
+<sub>Powered by SvelteKit & Vite</sub>
