@@ -7,7 +7,8 @@ const projects: { [key: string]: Project } = {
   emberry: {
     enchanted: true,
     banner: asset_path + "/img/banners/emberry.webp",
-    languages: { Tauri: 1 }
+    languages: { Tauri: 1 },
+    updated: "On Going"
   },
 
   /** Youtile Youtube Viewer Project */
@@ -32,7 +33,8 @@ const projects: { [key: string]: Project } = {
     achievement: {
       url: "https://ldjam.com/events/ludum-dare/49/rogue-planets",
       text: "39"
-    }
+    },
+    updated: "2021-10-04T07:32:24Z"
   },
 
   /** A cool ray marcher I build with opengl */
