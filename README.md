@@ -1,4 +1,4 @@
-# My Portfolio
+<h1 align="center"> Max Coppen's Portfolio </h1>
 
 <br>
 
