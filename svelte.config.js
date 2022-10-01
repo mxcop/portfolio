@@ -14,7 +14,7 @@ const config = {
       // default options are shown
       pages: "docs",
       assets: "docs",
-      fallback: "index.html"
+      fallback: null
     }),
 
     alias: {
