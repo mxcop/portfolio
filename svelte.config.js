@@ -14,6 +14,7 @@ const config = {
       // default options are shown
       pages: "docs",
       assets: "docs",
+      fallback: "index.html"
     }),
 
     alias: {
@@ -28,8 +29,6 @@ const config = {
     paths: {
 			base: dev ? '' : '/portfolio',
 		},
-
-    target: "#svelte"
 	},
 };
 
