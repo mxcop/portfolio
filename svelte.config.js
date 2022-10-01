@@ -12,9 +12,8 @@ const config = {
 	kit: {
 		adapter: adapter({
       // default options are shown
-      pages: "build",
-      assets: "build",
-      fallback: "index.html",
+      pages: "docs",
+      assets: "docs",
     }),
 
     alias: {
@@ -29,6 +28,8 @@ const config = {
     paths: {
 			base: dev ? '' : '/portfolio',
 		},
+
+    target: "#svelte"
 	},
 };
 
