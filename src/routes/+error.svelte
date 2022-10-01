@@ -9,7 +9,6 @@
   <h2>Oops! Looks like something went wrong...</h2>
   <h2 style="color: #777">Here's some coffee for the troubles</h2>
   <Icon name="coffee" />
-  <!-- <img src="src/assets/svg/coffee.svg" alt="Sorry for the troubles!"> -->
   <p>Please try again later :D</p>
 
   <footer>

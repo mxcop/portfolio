@@ -11,7 +11,6 @@ const config = {
 
 	kit: {
 		adapter: adapter({
-      // default options are shown
       pages: "docs",
       assets: "docs",
       fallback: null

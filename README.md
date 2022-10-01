@@ -32,14 +32,19 @@ Either in production, or while testing locally.
   ├─ docs       - # Github pages directory
   ├─ src/assets - # Local testing assets
   ├─ src/css    - # Global CSS files
-  ├─ src/data   - # Typescript files for parsing api data and static data
+  │
+  ├─ src/data/*        - # Typescript files for parsing api data and static data
+  │  └─ projects.ts    - # Static project data
+  │
   ├─ src/lib    - # Svelte components
+  │
   ├─ src/routes/*      - # Sveltekit file based routing
   │  ├─ +page.svelte   - # Index page
   │  ├─ +page.ts       - # Used for fetching data from github api
   │  ├─ +layout.svelte - # Svelte component included in every page
   │  ├─ +error.svelte  - # Error page
   │  └─ ...
+  │
   └─ static     - # Production assets (included within the build)
 ```
 
