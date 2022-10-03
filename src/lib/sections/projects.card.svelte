@@ -1,8 +1,10 @@
 <script lang="ts">
-  import { hide, langIconUrl } from "$data/languages";
+  import Icon from "svelte-icon/Icon.svelte";
+  import { hide, svgs } from "$data/languages";
   import type { Project } from "$data/project";
   import Links from "./projects.links.svelte";
-  import Icon from "$lib/icon.svelte";
+
+  import star from '$svg/star.svg?raw';
 
   export let repo: Project;
 
@@ -37,7 +39,7 @@
   
       {#if repo.stargazers_count}
         <i class="stargazers">
-          <Icon name="star" />
+          <Icon data={star} />
           <p>{ repo.stargazers_count }</p>
         </i>
       {/if}
@@ -66,7 +68,7 @@
       <ul>
         {#each languages as lang}
           {#if !hide(repo.languages, lang)}
-            <li><Icon name="langs/{ langIconUrl(lang, true) }" /></li>
+            <li><Icon data={ svgs[lang] } stroke="none" /></li>
           {/if}
         {/each}
       </ul>

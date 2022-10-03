@@ -1,6 +1,11 @@
 <script>
-  import Icon from "$lib/icon.svelte";
+  import Icon from "svelte-icon/Icon.svelte";
   import { asset_path } from "$data/path";
+
+  import github from '$svg/sites/github.svg?raw';
+  import discord from '$svg/sites/discord.svg?raw';
+  import gmail from '$svg/sites/gmail.svg?raw';
+  import linkedin from '$svg/sites/linkedin.svg?raw';
 
   const age = () => {
     var ageDifMs = Date.now() - Date.parse("11 Aug 2002 00:00:00 GMT");
@@ -30,16 +35,16 @@
       <h3>Max Coppen</h3>
       <div class="column">
         <a href="https://github.com/mxcop" class="ico-btn">
-          <Icon name="sites/github" />
+          <Icon data={github} />
         </a>
         <button on:click={copyDiscordTag} class="copy-btn">
-          <Icon name="sites/discord" />
+          <Icon data={discord} />
         </button>
         <a href="mailto: mx.coppen@gmail.com" class="ico-btn">
-          <Icon name="sites/gmail" />
+          <Icon data={gmail} />
         </a>
         <a href="https://www.linkedin.com/in/max-coppen-b6a16017b" class="ico-btn">
-          <Icon name="sites/linkedin" />
+          <Icon data={linkedin} />
         </a>
       </div>
     </div>

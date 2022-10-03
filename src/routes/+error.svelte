@@ -1,6 +1,8 @@
 <script>
   import { page } from '$app/stores';
-  import Icon from '$lib/icon.svelte';
+  import Icon from 'svelte-icon/Icon.svelte';
+
+  import coffee from '$svg/coffee.svg?raw';
 </script>
 
 
@@ -8,7 +10,7 @@
 
   <h2>Oops! Looks like something went wrong...</h2>
   <h2 style="color: #777">Here's some coffee for the troubles</h2>
-  <Icon name="coffee" />
+  <Icon data={coffee} stroke="none" />
   <p>Please try again later :D</p>
 
   <footer>
