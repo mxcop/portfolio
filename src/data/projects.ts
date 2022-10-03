@@ -94,7 +94,7 @@ const projects: { [key: string]: Project } = {
 
   /** A co-op minigame my friends and I made */
   barnstorm: {
-    banner: asset_path + "/img/banners/barnstorm-banner.jpg",
+    banner: asset_path + "/img/banners/barnstorm-banner.webp",
     desc: "A Frantic Co-op farming game my friends and I made",
 
     languages: { Unity: 2, "C#": 1 },
