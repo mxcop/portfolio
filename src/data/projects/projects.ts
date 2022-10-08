@@ -1,5 +1,5 @@
 import type { Project } from "./project";
-import { asset_path } from "./path";
+import { asset_path } from "../path";
 
 const projects: { [key: string]: Project } = {
 
@@ -45,10 +45,17 @@ const projects: { [key: string]: Project } = {
     desc: "A local co-op game using your phone as a controller",
   },
 
-  /** A cool ray marcher I build with opengl */
-  VoxelGameEngine: {
-    banner: asset_path + "/img/banners/vge.webp",
-    desc: "An unfinished Ray Marcher build using C++ and OpenGL"
+  /** A co-op minigame my friends and I made */
+  barnstorm: {
+    banner: asset_path + "/img/banners/barnstorm.webp",
+    urls: {
+      video: "https://youtu.be/sJJFOS8xfTM"
+    },
+    desc: "A Frantic Co-op farming game my friends and I made",
+
+    languages: { Unity: 2, "C#": 1 },
+    created: "2020-03-03T07:32:24Z",
+    updated: "2021-11-22T07:32:24Z"
   },
 
   /** Miniturn PvP Turn-based Game */
@@ -100,14 +107,10 @@ const projects: { [key: string]: Project } = {
     desc: "Small incomplete Neural Network library for C#"
   },
 
-  /** A co-op minigame my friends and I made */
-  barnstorm: {
-    banner: asset_path + "/img/banners/barnstorm.webp",
-    desc: "A Frantic Co-op farming game my friends and I made",
-
-    languages: { Unity: 2, "C#": 1 },
-    created: "2020-03-03T07:32:24Z",
-    updated: "2021-11-22T07:32:24Z"
+  /** A cool ray marcher I build with opengl */
+  VoxelGameEngine: {
+    banner: asset_path + "/img/banners/vge.webp",
+    desc: "An unfinished Ray Marcher build using C++ and OpenGL"
   },
 
   /** A game I worked on together with a team of developers */

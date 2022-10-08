@@ -1,6 +1,6 @@
 <script lang="ts">
   import Icon from '@iconify/svelte';
-  import type { ProjectUrls } from "../../data/project";
+  import type { ProjectUrls } from "../../data/projects/project";
 
   export let urls: ProjectUrls | undefined;
   export let achievement: any | undefined = undefined;
@@ -47,6 +47,12 @@
     {#if urls?.repo}
     <a href={ urls.repo } class="ico-btn">
       <Icon icon="link:github" />
+    </a>
+    {/if}
+
+    {#if urls?.video}
+    <a href={ urls.video } class="ico-btn">
+      <Icon icon="link:video" />
     </a>
     {/if}
 

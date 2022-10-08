@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Preview from "$sections/preview.svelte";
-  import Projects from "$sections/projects.svelte";
+  import Preview from "../lib/sections/preview.svelte";
+  import Projects from "../lib/sections/projects.svelte";
 
   export let data: any;
 </script>

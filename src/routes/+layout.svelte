@@ -1,6 +1,21 @@
-<script>
+<script lang="ts">
+  import loadLinkIcons from "../data/icons/icons.link";
+  import loadLangIcons from "../data/icons/icons.lang";
   import Icon from '@iconify/svelte';
-  import { asset_path } from "$data/path";
+  import { asset_path } from "../data/path";
+  import { onMount } from "svelte";
+
+  let headerWidth = 1080;
+
+  loadLinkIcons(); loadLangIcons(); // Load the iconify icon bundles
+
+  onMount(() => {
+    // Dynamic header width.
+    document.onscroll = () => {
+      const percent = Math.min(document.documentElement.scrollTop, 800) / 800.0;
+      headerWidth = 1080 + percent * (document.documentElement.clientWidth - 1080);
+    }
+  });
 
   const age = () => {
     var ageDifMs = Date.now() - Date.parse("11 Aug 2002 00:00:00 GMT");
@@ -21,7 +36,7 @@
 </script>
 
 
-<nav>
+<nav style="max-width: { headerWidth }px;">
   
   <img src="{ asset_path }/img/max.jpg" alt="My Face :P">
 
@@ -75,7 +90,6 @@
     transform: translateX(-50%);
 
     width: 100vw;
-    max-width: 1080px;
     height: 160px;
     padding: 20px;
 

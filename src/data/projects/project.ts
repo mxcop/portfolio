@@ -1,4 +1,4 @@
-import type { OctoRepo } from "../data/repos";
+import type { OctoRepo } from "../repos";
 
 /** Portfolio Project Interface */
 export interface Project {
@@ -54,6 +54,9 @@ export interface ProjectUrls {
 
   /** Url to a download page for this project */
   download?: string;
+
+  /** Url to a video of this project in action */
+  video?: string;
 }
 
 /**

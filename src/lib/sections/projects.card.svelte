@@ -1,7 +1,7 @@
 <script lang="ts">
   import Icon from '@iconify/svelte';
   import { hide, svgs } from "../../data/languages";
-  import type { Project } from "../../data/project";
+  import type { Project } from "../../data/projects/project";
   import Links from "./projects.links.svelte";
 
   export let repo: Project;
