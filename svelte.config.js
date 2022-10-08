@@ -26,7 +26,7 @@ const config = {
     },
 
     paths: {
-			base: dev ? '' : '/portfolio',
+			base: dev ? '' : '',
 		},
 	},
 };

@@ -1,4 +1,8 @@
 {
+  "src/assets/font/IBMPlexMono-Regular.ttf": {
+    "file": "_app/immutable/assets/IBMPlexMono-Regular-a3561766.ttf",
+    "src": "src/assets/font/IBMPlexMono-Regular.ttf"
+  },
   "src/assets/font/IBMPlexMono-Bold.ttf": {
     "file": "_app/immutable/assets/IBMPlexMono-Bold-1d364468.ttf",
     "src": "src/assets/font/IBMPlexMono-Bold.ttf"
@@ -7,33 +11,29 @@
     "file": "_app/immutable/assets/MontserratAlternates-Bold-4a204f20.ttf",
     "src": "src/assets/font/MontserratAlternates-Bold.ttf"
   },
-  "src/assets/font/MontserratAlternates-Italic.ttf": {
-    "file": "_app/immutable/assets/MontserratAlternates-Italic-5eb25b02.ttf",
-    "src": "src/assets/font/MontserratAlternates-Italic.ttf"
-  },
   "src/assets/font/MontserratAlternates-Regular.ttf": {
     "file": "_app/immutable/assets/MontserratAlternates-Regular-720187e6.ttf",
     "src": "src/assets/font/MontserratAlternates-Regular.ttf"
   },
+  "src/assets/font/MontserratAlternates-Italic.ttf": {
+    "file": "_app/immutable/assets/MontserratAlternates-Italic-5eb25b02.ttf",
+    "src": "src/assets/font/MontserratAlternates-Italic.ttf"
+  },
   "src/assets/font/MontserratAlternates-BoldItalic.ttf": {
     "file": "_app/immutable/assets/MontserratAlternates-BoldItalic-7da25c01.ttf",
     "src": "src/assets/font/MontserratAlternates-BoldItalic.ttf"
-  },
-  "src/assets/font/IBMPlexMono-Regular.ttf": {
-    "file": "_app/immutable/assets/IBMPlexMono-Regular-a3561766.ttf",
-    "src": "src/assets/font/IBMPlexMono-Regular.ttf"
   },
   "src/assets/font/Inter-VariableFont.ttf": {
     "file": "_app/immutable/assets/Inter-VariableFont-b9a8e5e2.ttf",
     "src": "src/assets/font/Inter-VariableFont.ttf"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-7f6b862a.js",
+    "file": "_app/immutable/start-5e1c8e60.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_index-95246513.js",
-      "_singletons-df975e9c.js",
+      "_singletons-a9beb23e.js",
       "_control-a6874251.js"
     ],
     "dynamicImports": [
@@ -66,12 +66,12 @@
     ]
   },
   "src/routes/+error.svelte": {
-    "file": "_app/immutable/components/pages/_error.svelte-f37b8d3d.js",
+    "file": "_app/immutable/components/pages/_error.svelte-e5018850.js",
     "src": "src/routes/+error.svelte",
     "isEntry": true,
     "imports": [
       "_index-95246513.js",
-      "_singletons-df975e9c.js",
+      "_singletons-a9beb23e.js",
       "_Icon-d44151a0.js"
     ],
     "css": [
@@ -110,8 +110,8 @@
       "_projects-ce8f2baa.js"
     ]
   },
-  "_singletons-df975e9c.js": {
-    "file": "_app/immutable/chunks/singletons-df975e9c.js",
+  "_singletons-a9beb23e.js": {
+    "file": "_app/immutable/chunks/singletons-a9beb23e.js",
     "imports": [
       "_index-95246513.js"
     ]
@@ -160,7 +160,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-eb09342d.js",
+    "file": "_app/immutable/chunks/1-e6b43247.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
