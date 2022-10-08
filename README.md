@@ -1,4 +1,5 @@
-<h1 align="center"> Max Coppen's Portfolio </h1>
+<h3 align="center"> Max's Portfolio </h3>
+<div align="right"><sup>Powered by <a href="https://kit.svelte.dev/">SvelteKit</a> & <a href="https://vitejs.dev/">Vite</a> & Icons from <a href="https://iconify.design/">Iconify</a></sup></div>
 
 <br>
 
@@ -13,7 +14,7 @@ npm run dev
 
 ### Assets *
 
-Make sure that all assets (images, svgs, ...) are mirrored in the following directories :<br>
+Make sure that all images are mirrored in the following directories :<br>
 
 ```src/assets/``` — *Local Testing Assets*<br>
 ```static/``` ——— *Production Assets*<br>
@@ -28,8 +29,7 @@ Either in production, or while testing locally.
 ### File Structure
 
 ```graphql
-./portfolio/* 
-  ├─ docs       - # Github pages directory
+./portfolio/*
   ├─ src/assets - # Local testing assets
   ├─ src/css    - # Global CSS files
   │
@@ -76,4 +76,4 @@ git commit -m "..."
 
 <br>
 
-<sub>Powered by SvelteKit & Vite</sub>
+<sub>Powered by <a href="https://kit.svelte.dev/">SvelteKit</a> & <a href="https://vitejs.dev/">Vite</a> & Icons from <a href="https://iconify.design/">Iconify</a></sub>
