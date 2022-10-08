@@ -3,17 +3,9 @@
     "file": "_app/immutable/assets/IBMPlexMono-Bold-1d364468.ttf",
     "src": "src/assets/font/IBMPlexMono-Bold.ttf"
   },
-  "src/assets/font/MontserratAlternates-Bold.ttf": {
-    "file": "_app/immutable/assets/MontserratAlternates-Bold-4a204f20.ttf",
-    "src": "src/assets/font/MontserratAlternates-Bold.ttf"
-  },
   "src/assets/font/IBMPlexMono-Regular.ttf": {
     "file": "_app/immutable/assets/IBMPlexMono-Regular-a3561766.ttf",
     "src": "src/assets/font/IBMPlexMono-Regular.ttf"
-  },
-  "src/assets/font/MontserratAlternates-Regular.ttf": {
-    "file": "_app/immutable/assets/MontserratAlternates-Regular-720187e6.ttf",
-    "src": "src/assets/font/MontserratAlternates-Regular.ttf"
   },
   "src/assets/font/MontserratAlternates-Italic.ttf": {
     "file": "_app/immutable/assets/MontserratAlternates-Italic-5eb25b02.ttf",
@@ -23,17 +15,25 @@
     "file": "_app/immutable/assets/MontserratAlternates-BoldItalic-7da25c01.ttf",
     "src": "src/assets/font/MontserratAlternates-BoldItalic.ttf"
   },
+  "src/assets/font/MontserratAlternates-Regular.ttf": {
+    "file": "_app/immutable/assets/MontserratAlternates-Regular-720187e6.ttf",
+    "src": "src/assets/font/MontserratAlternates-Regular.ttf"
+  },
+  "src/assets/font/MontserratAlternates-Bold.ttf": {
+    "file": "_app/immutable/assets/MontserratAlternates-Bold-4a204f20.ttf",
+    "src": "src/assets/font/MontserratAlternates-Bold.ttf"
+  },
   "src/assets/font/Inter-VariableFont.ttf": {
     "file": "_app/immutable/assets/Inter-VariableFont-b9a8e5e2.ttf",
     "src": "src/assets/font/Inter-VariableFont.ttf"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-0577e91c.js",
+    "file": "_app/immutable/start-995589b1.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_index-9ee828ae.js",
-      "_singletons-f4d67c65.js",
+      "_singletons-5b260b5e.js",
       "_control-03134885.js"
     ],
     "dynamicImports": [
@@ -65,12 +65,12 @@
     ]
   },
   "src/routes/+error.svelte": {
-    "file": "_app/immutable/components/pages/_error.svelte-e5ee09ed.js",
+    "file": "_app/immutable/components/pages/_error.svelte-d7a3c096.js",
     "src": "src/routes/+error.svelte",
     "isEntry": true,
     "imports": [
       "_index-9ee828ae.js",
-      "_singletons-f4d67c65.js",
+      "_singletons-5b260b5e.js",
       "_Icon-ea852849.js"
     ],
     "css": [
@@ -108,8 +108,8 @@
       "_projects-33d44ddb.js"
     ]
   },
-  "_singletons-f4d67c65.js": {
-    "file": "_app/immutable/chunks/singletons-f4d67c65.js",
+  "_singletons-5b260b5e.js": {
+    "file": "_app/immutable/chunks/singletons-5b260b5e.js",
     "imports": [
       "_index-9ee828ae.js"
     ]
@@ -155,7 +155,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-9cfa9213.js",
+    "file": "_app/immutable/chunks/1-4a727523.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
