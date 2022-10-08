@@ -37,6 +37,14 @@ const projects: { [key: string]: Project } = {
     updated: "2021-10-04T07:32:24Z"
   },
 
+  "Friends-in-a-galaxy": {
+    banner: asset_path + "/img/banners/friends-in-a-galaxy.webp",
+    urls: {
+      download: "https://github.com/FunkyBuritto/Friends-in-a-galaxy/releases/latest",
+    },
+    desc: "A local co-op game using your phone as a controller",
+  },
+
   /** A cool ray marcher I build with opengl */
   VoxelGameEngine: {
     banner: asset_path + "/img/banners/vge.webp",

@@ -23,7 +23,7 @@
 
   <div class="header" style={ 
     (repo.enchanted ? '' : '--enchanted: none;') + 
-    (repo.banner ? `min-height: 190px; background-image: url('${ repo.banner }')` : '') 
+    (repo.banner ? `--min-height: 190px; --min-height-sm: 140px; background-image: url('${ repo.banner }')` : '--min-height: auto; --min-height-sm: auto;') 
   }>
 
     <Links urls={repo.urls} achievement={repo.achievement} visible={repo.banner !== undefined} />
@@ -87,6 +87,10 @@
   height: fit-content;
   margin: 24px 16px;
 
+  @media only screen and (max-width: 372px) {
+    min-width: 100%;
+  }
+
   footer {
     padding: 16px;
     max-width: 100%;
@@ -99,6 +103,10 @@
       white-space: nowrap;
       color: #fff5;
       height: 8px;
+
+      @media only screen and (max-width: 530px) {
+        font-size: 10px;
+      }
     }
 
     ul {
@@ -147,11 +155,21 @@
   z-index: 1;
   overflow: hidden;
 
+  min-height: var(--min-height);
+
+  @media only screen and (max-width: 530px) {
+    min-height: var(--min-height-sm);
+  }
+
   .info {
     display: flex;
     flex: auto;
     margin-top: auto;
     align-items: center;
+
+    @media only screen and (max-width: 530px) {
+      font-size: 0.8em;
+    }
 
     .id {
       display: flex;
