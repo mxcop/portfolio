@@ -1,12 +1,6 @@
 <script lang="ts">
-  import Icon from "svelte-icon/Icon.svelte";
-  import type { ProjectUrls } from "$data/project";
-
-  import github from '$svg/sites/github.svg?raw';
-  import steam from '$svg/sites/steam.svg?raw';
-  import download from '$svg/download.svg?raw';
-  import itch from '$svg/sites/itch.svg?raw';
-  import award from '$svg/award.svg?raw';
+  import Icon from '@iconify/svelte';
+  import type { ProjectUrls } from "../../data/project";
 
   export let urls: ProjectUrls | undefined;
   export let achievement: any | undefined = undefined;
@@ -23,7 +17,7 @@
 
     {#if achievement}
     <a href={ achievement.url } class="ico-btn achievement">
-      <Icon data={award} />
+      <Icon icon="link:award" />
       { achievement.text }<sup>th</sup>
     </a>
     {/if}
@@ -34,25 +28,25 @@
 
     {#if urls?.steam}
     <a href={ urls.steam } class="ico-btn">
-      <Icon data={steam} />
+      <Icon icon="link:steam" />
     </a>
     {/if}
 
     {#if urls?.download}
     <a href={ urls.download } class="ico-btn">
-      <Icon data={download} />
+      <Icon icon="link:download" />
     </a>
     {/if}
 
     {#if urls?.itch}
     <a href={ urls.itch } class="ico-btn">
-      <Icon data={itch} />
+      <Icon icon="link:itch" />
     </a>
     {/if}
 
     {#if urls?.repo}
     <a href={ urls.repo } class="ico-btn">
-      <Icon data={github} />
+      <Icon icon="link:github" />
     </a>
     {/if}
 

@@ -1,12 +1,16 @@
 import { error, type Load } from "@sveltejs/kit";
 import { browser } from '$app/environment';
 import { fromResponse, updateRepoLanguages } from "../data/repos";
+import loadLinkIcons from "../data/icons.link";
+import loadLangIcons from "../data/icons.lang";
 import projects from "../data/projects";
 
 const pat_token = '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';
 
 export const load: Load = async ({ fetch }) => {
   if (browser) {
+    loadLinkIcons(); loadLangIcons(); // Load the iconify icon bundles
+
     const stored_repos = localStorage.getItem("repos");
 
     // Return the stored repos if they exist.
