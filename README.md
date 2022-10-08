@@ -55,7 +55,7 @@ Either in production, or while testing locally.
 
 <div>
   <div align="left">First build the website using this npm command :</div>
-  <div align="right"><sub>The build files will be placed in the /docs directory *</sub></div>
+  <div align="right"><sub>The build files will be placed in the /build directory *</sub></div>
 </div>
 
 ```
@@ -63,13 +63,12 @@ npm run build
 ```
 
 <div>
-  <div align="left">Then once the build is completed push the new /docs to the main branch :</div>
-  <div align="right"><sub>Command line example *</sub></div>
+  <div align="left">Then once the build is completed run the deploy command :</div>
+  <div align="right"><sub>This will move the /build directory into the gh-pages branch *</sub></div>
 </div>
 
 ```
-git add -A
-git commit -m "..."
+npm run deploy
 ```
 
 <br>
