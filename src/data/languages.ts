@@ -15,8 +15,8 @@ export function hide(langs: any, lang: string): boolean {
   // Don't show HTML if Tauri is already shown.
   if (langs["Tauri"] && lang == "HTML") return true;
 
-  // Don't show ShaderLab because it's dumb.
-  return lang == "ShaderLab";
+  // Don't show ShaderLab or HLSL because it's dumb.
+  return lang == "ShaderLab" || lang == "HLSL";
 }
 
 /** Language icon urls with color. */
@@ -33,7 +33,6 @@ export const svgs: any = {
   Tauri: 'tauri',
   Vue: 'vue',
   Batchfile: 'bat',
-  HLSL: 'unity',
   GLSL: 'glsl',
   Unity: 'unity',
 };

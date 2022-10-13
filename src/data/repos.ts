@@ -62,19 +62,19 @@ export function fromResponse(response: any[]): OctoRepo[] {
 
 /** Update the languages attribute of a repo stored in the store. */
 export function updateRepoLanguages(index: number, languages: { [key: string]: number }) {
-  const repos = JSON.parse(localStorage.getItem("repos")!);
+  const repos = JSON.parse(sessionStorage.getItem("repos")!);
 
   repos[index].languages = languages;
 
-  localStorage.setItem("repos", JSON.stringify(repos));
+  sessionStorage.setItem("repos", JSON.stringify(repos));
 
-  dispatchEvent(new StorageEvent('storage', { key: 'repos', storageArea: localStorage, newValue: JSON.stringify(repos) }));
+  dispatchEvent(new StorageEvent('storage', { key: 'repos', storageArea: sessionStorage, newValue: JSON.stringify(repos) }));
 }
 
 /** Add a callback to whenever the repos store gets updated. */
 export function onReposUpdated(callback: (newValue: any) => void) {
   addEventListener('storage', e => {
-    if (e.storageArea === localStorage && e.key === 'repos') {
+    if (e.storageArea === sessionStorage && e.key === 'repos') {
       callback(JSON.parse(e.newValue!));
     }
   });

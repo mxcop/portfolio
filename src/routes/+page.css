@@ -2,7 +2,7 @@
 
 html {
   font-family: "Inter", monospace !important;
-  background-color: #1a1a1a !important;
+  background-color: #111 !important;
   color: #a0a0a0;
   overflow-x: hidden;
 }
@@ -19,7 +19,9 @@ body {
   overflow-x: hidden;
 
   font-family: "Inter", monospace !important;
-  background-color: #1a1a1a !important;
+  background-image: radial-gradient(#222 1px, transparent 0), radial-gradient(#222 1px, transparent 0) !important;
+  background-position: 0 0, 25px 25px;
+  background-size: 50px 50px;
   color: #a0a0a0;
 }
 

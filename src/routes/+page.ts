@@ -7,7 +7,7 @@ const pat_token = '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';
 
 export const load: Load = async ({ fetch }) => {
   if (browser) {
-    const stored_repos = localStorage.getItem("repos");
+    const stored_repos = sessionStorage.getItem("repos");
 
     // Return the stored repos if they exist.
     if (stored_repos) {
@@ -39,7 +39,7 @@ export const load: Load = async ({ fetch }) => {
 
     // Only save the important information.
     const octoRepos = fromResponse(fetched_repos);
-    localStorage.setItem("repos", JSON.stringify(octoRepos));
+    sessionStorage.setItem("repos", JSON.stringify(octoRepos));
 
     console.log('Stored repos !');
 

@@ -43,6 +43,7 @@ const projects: { [key: string]: Project } = {
       download: "https://github.com/FunkyBuritto/Friends-in-a-galaxy/releases/latest",
     },
     desc: "A local co-op game using your phone as a controller",
+    languages: { Unity: 1 }
   },
 
   /** A co-op minigame my friends and I made */
@@ -67,7 +68,7 @@ const projects: { [key: string]: Project } = {
     },
     desc: "Turn-based strategy game with a twist",
 
-    languages: { Unity: 2, "C#": 1 },
+    languages: { "C#": 1, Unity: 2 },
     created: "2020-03-03T07:32:24Z",
     updated: "2021-11-22T07:32:24Z"
   },
@@ -87,7 +88,7 @@ const projects: { [key: string]: Project } = {
       itch: "https://maxcoppen.itch.io/prompt",
     },
 
-    languages: { Unity: 2, "C#": 1 },
+    languages: { "C#": 1, Unity: 2 },
     created: "2020",
     updated: "2021-11-26T07:32:24Z"
   },
@@ -118,7 +119,7 @@ const projects: { [key: string]: Project } = {
     banner: asset_path + "/img/banners/snc.webp",
     desc: "A project where I gained loads of gamedev experience.",
 
-    languages: { Unity: 2, "C#": 1 },
+    languages: { "C#": 1, Unity: 2 },
     created: "2018",
     updated: "2019"
   },

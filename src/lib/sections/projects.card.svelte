@@ -130,6 +130,12 @@
         white-space: nowrap;
 
         :global(svg) {
+          @media only screen and (max-width: 530px) {
+            width: 18px;
+            height: 18px;
+            margin-top: 2px;
+          }
+
           width: 22px;
           height: 22px;
           opacity: .8;
