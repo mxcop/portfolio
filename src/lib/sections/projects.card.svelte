@@ -66,7 +66,7 @@
       <ul>
         {#each languages as lang}
           {#if !hide(repo.languages, lang)}
-            <li icon={svgs[lang]}><Icon icon={ 'lang:' + svgs[lang] } stroke="none" /></li>
+            <li><Icon icon={ 'lang:' + svgs[lang] } stroke="none" /></li>
           {/if}
         {/each}
       </ul>
