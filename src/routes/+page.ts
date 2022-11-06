@@ -3,7 +3,7 @@ import { browser } from '$app/environment';
 import { fromResponse, updateRepoLanguages } from "../data/repos";
 import projects from "../data/projects/projects";
 
-const pat_token = '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';
+const pat_token = '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';
 
 export const load: Load = async ({ fetch }) => {
   if (browser) {

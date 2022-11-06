@@ -46,6 +46,12 @@ const projects: { [key: string]: Project } = {
     languages: { Unity: 1 }
   },
 
+  /** A HTML parser made with Rust */
+  wax: {
+    banner: asset_path + "/img/banners/wax.webp",
+    desc: "A HTML parser made written in rust",
+  },
+
   /** A co-op minigame my friends and I made */
   barnstorm: {
     banner: asset_path + "/img/banners/barnstorm.webp",
