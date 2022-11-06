@@ -49,7 +49,7 @@ const projects: { [key: string]: Project } = {
   /** A HTML parser made with Rust */
   wax: {
     banner: asset_path + "/img/banners/wax.webp",
-    desc: "A HTML parser made written in rust",
+    desc: "A HTML parser made written in rust"
   },
 
   /** A co-op minigame my friends and I made */
